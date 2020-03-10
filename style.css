@@ -1,0 +1,423 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+* {-webkit-font-smoothing: antialiased;}
+.pageWrap{
+    padding: 0 5vw 0 5vw;
+}
+
+nav{
+    position: fixed;
+    width: 100vw;
+    text-align: center;
+    background-color: white;
+    z-index: 100;
+}
+
+.mobileNav{
+    width: 100%;
+    height: 60px;
+    font-size: 40px;
+    display: grid;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.mobileNav > i{
+    margin-right: 25px;
+}
+
+#navigacija {
+    display: none;
+    padding:0 !important;
+
+
+}
+
+#navigacija li{
+    display: block;
+    width: 100vw;
+    margin: 10px 0 10px 0;
+}
+
+#navigacija > li > a{
+    color: black;
+    text-decoration: none;
+}
+
+
+
+section{
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+span{
+    color:rgb(96, 186, 228);
+    font-weight:1000;
+}
+strong{ 
+    font-weight: bold; 
+}
+
+.black{
+    color: black;
+}
+
+h1{
+    padding-top: 80px;
+border-bottom: solid black 2px;
+}
+
+
+
+
+
+header{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+
+}
+
+header > div{
+    text-align: center;
+}
+
+header > div > span{
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+
+#oMeni{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 40px;
+    grid-template-areas: "naslov"
+                        "slika"
+                        "besedilo"
+                        "seznam"
+                        "zivljenjepis";
+}
+
+
+#oMeni > p{
+    grid-area: besedilo;
+    text-align: justify;
+    margin: 0;
+}
+#oMeni > h1{
+    grid-area: naslov;
+    margin: auto;
+}
+
+#aboutPic{
+    grid-area:slika;
+    border-radius: 200px;
+    margin: auto;
+    height: 100px;
+}
+
+#oMeni > ul{
+    grid-area: seznam;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+#oMeni > ul > li{
+    margin-bottom: 10px;
+}
+
+#oMeni > a{
+    grid-area: zivljenjepis;
+    margin: auto;
+}
+
+button,.gumb{
+    background-color: rgb(96, 186, 228);
+    color: white;
+    padding: 10px;
+    border-style: none;
+    transition: 0.2s linear;
+}
+
+button:hover,.gumb:hover{
+  background-color: rgb(35, 135, 182);
+}
+
+#exp{
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "izobrazba"
+                        "izkusnje";
+}
+
+.izkusnja:last-child{
+    border-bottom: none;
+}
+
+.izkusnje{
+    grid-area: izkusnje;
+}
+
+.izobrazba{
+    grid-area:izobrazba;
+}
+
+.izkusnja{
+    border-bottom: solid rgb(184, 185, 188) 1px ;
+    margin: 10px 0px;
+}
+
+.izkusnjaInfo{
+    width: 100%;
+}
+
+.izkusnjaInfo > ul{
+    list-style: none;
+    padding-left: 10px;
+}
+
+.izkusnjaInfo > ul > li{
+    text-indent: -10px;
+}
+.izkusnjaInfo > ul > li::before{
+    content:" - ";
+}
+
+.podjetje{
+    margin-bottom: 10px;
+}
+
+.vescinaSimbol{
+    font-size: 1.5em;
+}
+
+#vescine{
+    display: grid;
+}
+
+.vescina{
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 40px 100px;
+    grid-template-areas: "simbol naslov"
+                        "simbol besedilo";
+    border-bottom: solid rgb(184, 185, 188) 1px ;
+}
+
+.vescina:last-child{
+    border-bottom: none;
+}
+
+.vescina > span{
+grid-area: simbol;
+text-align: center;
+align-self: center;
+margin-bottom: auto;
+margin-top:10px;
+}
+
+.vescina > div{
+grid-area: naslov;
+align-self: center;
+font-weight: bold;
+}
+.vescina > ul{
+    list-style: none;
+    grid-area: besedilo;
+    padding-left: 10px;
+    margin-right: auto;
+    margin-top:0px;
+}
+
+.vescina > ul > li{
+    text-indent: -10px;
+}
+
+.vescina > ul > li::before{
+    content: "- ";
+}
+
+
+#projekti{
+    display: grid;
+    grid-gap: 40px;
+    margin-bottom: 80px;
+    
+}
+
+.projekt{
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+   
+}
+
+.projekt > a > img{
+  
+    width: 100%;
+}
+
+.projektOver{
+    background-color: rgba(15, 15, 15, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top:0;
+    left:-150%;
+    width: 100%;
+    height: 100%;
+    color: white;
+    transition: 0.5s linear;
+}
+.projektOver > p{
+    padding: 10px;
+}
+
+.projekt:hover > .projektOver{
+left:0;
+transition: 1s linear;
+}
+
+.kategorije > ul{
+ list-style: none;
+ display: flex;
+ flex-direction: row;
+ justify-content: space-evenly;
+ padding: 0;
+ cursor: pointer;
+}
+.active{
+color:  rgb(96, 186, 228);
+}
+
+
+
+
+footer{
+    width: 100vw;
+    height: 60px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+}
+footer > a {
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+
+
+
+@media only screen and (min-width:788px){
+
+   
+
+    .pageWrap{
+        padding: 0 15vw 0 15vw;
+    }
+
+    .mobileNav{
+        display: none;
+    }
+
+    #navigacija{
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+
+    }
+    #navigacija > li{
+        width:auto;
+        margin-right: 25px;
+        margin-left: 25px;
+    }
+
+    #oMeni{
+        grid-template-columns:1fr 1fr;
+        grid-template-areas: "naslov slika"
+                            "seznam besedilo"
+                            "zivljenjepis zivljenjepis"
+                            ;
+    }
+
+    #oMeni > ul{
+        margin-bottom: auto;
+    }
+
+    #oMeni > p{
+        margin-bottom: auto;
+    }
+
+    #oMeni > h1{
+      
+        margin-bottom: auto;
+        padding:0;
+       /*  background-color: rgb(96, 186, 228); */
+    }
+
+
+
+    #exp{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "izkusnje izobrazba";
+    }
+
+
+    #vescine{
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "naslov naslov naslov";
+    }
+
+    .vescina{
+        border-right: solid rgb(184, 185, 188) 1px ;
+        border-bottom: none;
+    }
+
+    .vescina:last-child{
+        border-right:none;
+    }
+
+    #vescine >h1{
+        grid-area: naslov;
+    }
+
+
+    #projekti{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "naslov naslov naslov"
+                            "filter filter filter";
+    }
+
+    #projekti > h1{
+        grid-area: naslov;
+    }
+
+    .kategorije{
+        grid-area: filter;
+    }
+
+    footer {
+       grid-template-columns: 150px 150px 150px;
+    }
+
+}

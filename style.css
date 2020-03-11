@@ -92,6 +92,7 @@ header > div{
 header > div > span{
     font-size: 3rem;
     font-weight: 900;
+
 }
 
 
@@ -117,6 +118,7 @@ header > div > span{
 #oMeni > h1{
     grid-area: naslov;
     margin: auto;
+    width: 100%;
 }
 
 #aboutPic{
@@ -312,7 +314,7 @@ footer{
     width: 100vw;
     height: 60px;
     display: grid;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     position: fixed;
@@ -353,9 +355,9 @@ footer > a {
 
     #oMeni{
         grid-template-columns:1fr 1fr;
-        grid-template-areas: "naslov slika"
-                            "seznam besedilo"
-                            "zivljenjepis zivljenjepis"
+        grid-template-areas: "naslov naslov"
+                            "slika besedilo"
+                            "seznam zivljenjepis"
                             ;
     }
 
@@ -367,12 +369,7 @@ footer > a {
         margin-bottom: auto;
     }
 
-    #oMeni > h1{
-      
-        margin-bottom: auto;
-        padding:0;
-       /*  background-color: rgb(96, 186, 228); */
-    }
+ 
 
 
 
